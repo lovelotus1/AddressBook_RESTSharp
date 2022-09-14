@@ -1,13 +1,70 @@
 {
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false,
-    "sourceMap": true,
-    "target": "es5"
-  },
-  "exclude": [
-    "node_modules",
-    "wwwroot"
+  "contacts": [
+    {
+      "id": 1,
+      "firstname": "Tony",
+      "lastname": "Stark",
+      "address": "Stark Tower",
+      "city": "Manhattan",
+      "state": "NewYork",
+      "zip": "100001",
+      "phoneNo": "8987224534",
+      "email": "ironman@gmail.com"
+    },
+    {
+      "id": 2,
+      "firstname": "Steve",
+      "lastname": "Rogers",
+      "address": "Times Square",
+      "city": "Brooklyn",
+      "state": "Texas",
+      "zip": "11224",
+      "phoneNo": "9876778434",
+      "email": "captainAmerica@yahoo.com"
+    },
+    {
+      "id": 3,
+      "firstname": "Bruce",
+      "lastname": "Banner",
+      "address": "Vandalia",
+      "city": "Greater Dayton",
+      "state": "Florida",
+      "zip": "45441",
+      "phoneNo": "9403425611",
+      "email": "incredibleHulk@gmail.com"
+    },
+    {
+      "id": 4,
+      "firstname": "Peter",
+      "lastname": "Parker",
+      "address": "Queens",
+      "city": "NewYork City",
+      "state": "NewYork",
+      "zip": "10023",
+      "phoneNo": "7013224355",
+      "email": "spiderman@gmail.com"
+    },
+    {
+      "firstname": "Thor",
+      "lastname": "Odinson",
+      "phoneNo": "7858070934",
+      "address": "RoyalPalace",
+      "city": "Asgard",
+      "state": "Asgard",
+      "zip": "535678",
+      "email": "thor@rediffmail.com",
+      "id": 6
+    },
+    {
+      "firstname": "Clint",
+      "lastname": "Barton",
+      "phoneNo": "7654564345",
+      "address": "Broadway Street",
+      "city": "NewYork City",
+      "state": "NewYork",
+      "zip": "14422",
+      "email": "hawkeye@rediffmail.com",
+      "id": 7
+    }
   ]
 }
