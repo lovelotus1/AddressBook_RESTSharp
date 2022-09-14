@@ -106,5 +106,35 @@ namespace RESTSharpTest
                 Console.WriteLine(response.Content);
             }
         }
+        // Ability to update the phoneNo, zipCode into the json server
+        [TestMethod]
+        public void OnCallingPutAPI_ReturnContactObjects()
+        {
+            // Initialize the request for PUT to add new employee
+            RestRequest request = new RestRequest("/contacts/6", Method.PUT);
+            JsonObject jsonObj = new JsonObject();
+            jsonObj.Add("firstname", "Thor");
+            jsonObj.Add("lastname", "Odinson");
+            jsonObj.Add("phoneNo", "7858070934");
+            jsonObj.Add("address", "RoyalPalace");
+            jsonObj.Add("city", "Asgard");
+            jsonObj.Add("state", "Asgard");
+            jsonObj.Add("zip", "535678");
+            jsonObj.Add("email", "thor@rediffmail.com");
+            //Added parameters to the request object such as the content-type and attaching the jsonObj with the request
+            request.AddParameter("application/json", jsonObj, ParameterType.RequestBody);
+
+            //Act
+            IRestResponse response = client.Execute(request);
+
+            //Assert
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            Contact contact = JsonConvert.DeserializeObject<Contact>(response.Content);
+            Assert.AreEqual("Thor", contact.FirstName);
+            Assert.AreEqual("Odinson", contact.LastName);
+            Assert.AreEqual("7858070934", contact.PhoneNo);
+            Assert.AreEqual("535678", contact.Zip);
+            Console.WriteLine(response.Content);
+        }
     }
 }
